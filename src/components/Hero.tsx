@@ -1,10 +1,25 @@
 import { Button } from "@/components/ui/button";
 import { Mail, Linkedin, FileText } from "lucide-react";
+import { SparklesCore } from "@/components/ui/sparkles";
 
 const Hero = () => {
   return (
     <section className="min-h-screen flex items-center justify-center bg-gradient-hero relative overflow-hidden">
-      {/* Animated background elements */}
+      {/* Sparkles background */}
+      <div className="absolute inset-0 w-full h-full">
+        <SparklesCore
+          id="hero-sparkles"
+          background="transparent"
+          minSize={0.6}
+          maxSize={1.4}
+          particleDensity={100}
+          className="w-full h-full"
+          particleColor="hsl(var(--primary))"
+          speed={0.5}
+        />
+      </div>
+      
+      {/* Gradient overlays */}
       <div className="absolute inset-0 opacity-20">
         <div className="absolute top-20 left-10 w-72 h-72 bg-primary rounded-full blur-3xl animate-pulse" />
         <div className="absolute bottom-20 right-10 w-96 h-96 bg-accent rounded-full blur-3xl animate-pulse delay-1000" />
