@@ -4,6 +4,42 @@ import { Briefcase, Users } from "lucide-react";
 const Experience = () => {
   const data = [
     {
+      title: "Dec 2023 - Present",
+      content: (
+        <div>
+          <div className="flex gap-4 mb-6">
+            <div className="flex-shrink-0">
+              <div className="w-12 h-12 rounded-full bg-gradient-primary flex items-center justify-center">
+                <Users className="h-6 w-6 text-primary-foreground" />
+              </div>
+            </div>
+            <div className="flex-1">
+              <h3 className="text-xl md:text-2xl font-bold text-foreground mb-1">
+                Head of Event Planner
+              </h3>
+              <p className="text-primary font-semibold mb-1">EEPIS English Community (E2C)</p>
+              <p className="text-muted-foreground text-sm mb-3">Surabaya, Indonesia</p>
+            </div>
+          </div>
+          
+          <p className="text-foreground/80 mb-4 text-sm md:text-base">
+            Student club focusing on English communication and ESL understanding.
+          </p>
+          
+          <ul className="space-y-3">
+            <li className="flex gap-2 text-foreground text-sm md:text-base">
+              <span className="text-primary mt-1">▹</span>
+              <span>Managed complete cycle of student activity programs, from concept initiation and operational coordination to results analysis.</span>
+            </li>
+            <li className="flex gap-2 text-foreground text-sm md:text-base">
+              <span className="text-primary mt-1">▹</span>
+              <span>Served as main person in charge for planning and executing various student activities.</span>
+            </li>
+          </ul>
+        </div>
+      ),
+    },
+    {
       title: "Jun 2024 - Dec 2024",
       content: (
         <div>
@@ -98,42 +134,6 @@ const Experience = () => {
             <li className="flex gap-2 text-foreground text-sm md:text-base">
               <span className="text-primary mt-1">▹</span>
               <span>Planned and managed financial framework for BSO GT events, detailing projected income and expenses to maintain fiscal responsibility.</span>
-            </li>
-          </ul>
-        </div>
-      ),
-    },
-    {
-      title: "Dec 2023 - Present",
-      content: (
-        <div>
-          <div className="flex gap-4 mb-6">
-            <div className="flex-shrink-0">
-              <div className="w-12 h-12 rounded-full bg-gradient-primary flex items-center justify-center">
-                <Users className="h-6 w-6 text-primary-foreground" />
-              </div>
-            </div>
-            <div className="flex-1">
-              <h3 className="text-xl md:text-2xl font-bold text-foreground mb-1">
-                Head of Event Planner
-              </h3>
-              <p className="text-primary font-semibold mb-1">EEPIS English Community (E2C)</p>
-              <p className="text-muted-foreground text-sm mb-3">Surabaya, Indonesia</p>
-            </div>
-          </div>
-          
-          <p className="text-foreground/80 mb-4 text-sm md:text-base">
-            Student club focusing on English communication and ESL understanding.
-          </p>
-          
-          <ul className="space-y-3">
-            <li className="flex gap-2 text-foreground text-sm md:text-base">
-              <span className="text-primary mt-1">▹</span>
-              <span>Managed complete cycle of student activity programs, from concept initiation and operational coordination to results analysis.</span>
-            </li>
-            <li className="flex gap-2 text-foreground text-sm md:text-base">
-              <span className="text-primary mt-1">▹</span>
-              <span>Served as main person in charge for planning and executing various student activities.</span>
             </li>
           </ul>
         </div>
