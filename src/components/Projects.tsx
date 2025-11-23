@@ -17,7 +17,8 @@ const projects = [
     techStack: ["Unity", "C#", "Photon", "Multiplayer"],
     achievements: "🏆 Finalist KMIPN 2025",
     category: "Educational Game",
-    status: "completed"
+    status: "completed",
+    url: "https://zenomaru.itch.io/makan-siang-bergizi"
   },
   {
     title: "Wacky Whackers",
@@ -26,7 +27,8 @@ const projects = [
     techStack: ["Unity", "C#", "First-Person"],
     achievements: "🏆 Top 60 Gameseed 2025",
     category: "Action Game",
-    status: "completed"
+    status: "completed",
+    url: "https://zenomaru.itch.io/wacky-whackers"
   },
   {
     title: "Projek Pusmendik",
@@ -34,7 +36,8 @@ const projects = [
     image: pusmendikImage,
     techStack: ["Unity", "C#", "WebGL", "Education"],
     category: "Educational Game",
-    status: "completed"
+    status: "completed",
+    url: "https://zenomaru.itch.io/projek-pusmendik"
   },
   {
     title: "Dungeon of Arcanacious",
@@ -42,7 +45,8 @@ const projects = [
     image: dungeonImage,
     techStack: ["Godot", "GDScript", "Procedural Generation", "RPG"],
     category: "RPG Game",
-    status: "completed"
+    status: "completed",
+    url: "https://zenomaru.itch.io/dungeon-arcanacious"
   },
   {
     title: "Project COG",
@@ -104,7 +108,10 @@ const Projects = () => {
                   }`}
                   style={{ transitionDelay: `${index * 100}ms` }}
                 >
-                  <Card className="overflow-hidden bg-card border-border hover:border-primary transition-all duration-300 h-full group hover:shadow-xl hover:shadow-primary/20 cursor-pointer">
+                  <Card 
+                    className="overflow-hidden bg-card border-border hover:border-primary transition-all duration-300 h-full group hover:shadow-xl hover:shadow-primary/20 cursor-pointer"
+                    onClick={() => project.url && window.open(project.url, '_blank')}
+                  >
                     {/* Project Image */}
                     <div className="relative h-64 overflow-hidden">
                       <img 
@@ -169,15 +176,22 @@ const Projects = () => {
                       
                       {/* Action Buttons */}
                       <div className="flex gap-3">
-                        <button className="flex items-center gap-2 text-sm text-primary hover:text-primary/80 transition-colors font-semibold">
-                          <ExternalLink className="h-4 w-4" />
-                          View Details
-                        </button>
-                        {project.status === 'completed' && (
-                          <button className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors font-semibold">
-                            <Github className="h-4 w-4" />
-                            Source
+                        {project.url ? (
+                          <button 
+                            className="flex items-center gap-2 text-sm text-primary hover:text-primary/80 transition-colors font-semibold"
+                            onClick={(e) => {
+                              e.stopPropagation();
+                              window.open(project.url, '_blank');
+                            }}
+                          >
+                            <ExternalLink className="h-4 w-4" />
+                            Play Game
                           </button>
+                        ) : (
+                          <span className="flex items-center gap-2 text-sm text-muted-foreground font-semibold">
+                            <ExternalLink className="h-4 w-4" />
+                            Coming Soon
+                          </span>
                         )}
                       </div>
                     </div>
