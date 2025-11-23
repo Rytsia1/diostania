@@ -4,6 +4,18 @@ import { Briefcase, Users } from "lucide-react";
 const Experience = () => {
   const data = [
     {
+      title: "2023",
+      content: (
+        <div className="py-4">
+          <div className="flex items-center gap-4">
+            <div className="h-px flex-1 bg-gradient-to-r from-transparent via-primary to-transparent opacity-50" />
+            <h2 className="text-3xl md:text-4xl font-bold text-primary">2023</h2>
+            <div className="h-px flex-1 bg-gradient-to-r from-primary via-transparent to-transparent opacity-50" />
+          </div>
+        </div>
+      ),
+    },
+    {
       title: "Dec 2023 - Present",
       content: (
         <div>
@@ -36,6 +48,18 @@ const Experience = () => {
               <span>Served as main person in charge for planning and executing various student activities.</span>
             </li>
           </ul>
+        </div>
+      ),
+    },
+    {
+      title: "2024",
+      content: (
+        <div className="py-4">
+          <div className="flex items-center gap-4">
+            <div className="h-px flex-1 bg-gradient-to-r from-transparent via-primary to-transparent opacity-50" />
+            <h2 className="text-3xl md:text-4xl font-bold text-primary">2024</h2>
+            <div className="h-px flex-1 bg-gradient-to-r from-primary via-transparent to-transparent opacity-50" />
+          </div>
         </div>
       ),
     },
