@@ -17,8 +17,7 @@ const projects = [
     techStack: ["Unity", "C#", "Photon", "Multiplayer"],
     achievements: "🏆 Finalist KMIPN 2025",
     category: "Educational Game",
-    status: "completed",
-    url: "https://zenomaru.itch.io/makan-siang-bergizi"
+    status: "completed"
   },
   {
     title: "Wacky Whackers",
@@ -27,8 +26,7 @@ const projects = [
     techStack: ["Unity", "C#", "First-Person"],
     achievements: "🏆 Top 60 Gameseed 2025",
     category: "Action Game",
-    status: "completed",
-    url: "https://zenomaru.itch.io/wacky-whackers"
+    status: "completed"
   },
   {
     title: "Projek Pusmendik",
@@ -36,8 +34,7 @@ const projects = [
     image: pusmendikImage,
     techStack: ["Unity", "C#", "WebGL", "Education"],
     category: "Educational Game",
-    status: "completed",
-    url: "https://zenomaru.itch.io/projek-pusmendik"
+    status: "completed"
   },
   {
     title: "Dungeon of Arcanacious",
@@ -45,8 +42,7 @@ const projects = [
     image: dungeonImage,
     techStack: ["Godot", "GDScript", "Procedural Generation", "RPG"],
     category: "RPG Game",
-    status: "completed",
-    url: "https://zenomaru.itch.io/dungeon-arcanacious"
+    status: "completed"
   },
   {
     title: "Project COG",
@@ -108,10 +104,7 @@ const Projects = () => {
                   }`}
                   style={{ transitionDelay: `${index * 100}ms` }}
                 >
-                  <Card 
-                    className="overflow-hidden bg-card border-border hover:border-primary transition-all duration-300 h-full group hover:shadow-xl hover:shadow-primary/20 cursor-pointer"
-                    onClick={() => project.url && window.open(project.url, '_blank')}
-                  >
+                  <Card className="overflow-hidden bg-card border-border hover:border-primary transition-all duration-300 h-full group hover:shadow-xl hover:shadow-primary/20 cursor-pointer">
                     {/* Project Image */}
                     <div className="relative h-64 overflow-hidden">
                       <img 
@@ -176,22 +169,15 @@ const Projects = () => {
                       
                       {/* Action Buttons */}
                       <div className="flex gap-3">
-                        {project.url ? (
-                          <button 
-                            className="flex items-center gap-2 text-sm text-primary hover:text-primary/80 transition-colors font-semibold"
-                            onClick={(e) => {
-                              e.stopPropagation();
-                              window.open(project.url, '_blank');
-                            }}
-                          >
-                            <ExternalLink className="h-4 w-4" />
-                            Play Game
+                        <button className="flex items-center gap-2 text-sm text-primary hover:text-primary/80 transition-colors font-semibold">
+                          <ExternalLink className="h-4 w-4" />
+                          View Details
+                        </button>
+                        {project.status === 'completed' && (
+                          <button className="flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition-colors font-semibold">
+                            <Github className="h-4 w-4" />
+                            Source
                           </button>
-                        ) : (
-                          <span className="flex items-center gap-2 text-sm text-muted-foreground font-semibold">
-                            <ExternalLink className="h-4 w-4" />
-                            Coming Soon
-                          </span>
                         )}
                       </div>
                     </div>
@@ -206,15 +192,26 @@ const Projects = () => {
             <p className="text-muted-foreground mb-4">
               Want to see more of my work?
             </p>
-            <a 
-              href="https://zenomaru.itch.io" 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-all duration-300 font-semibold"
-            >
-              <ExternalLink className="h-4 w-4" />
-              Itch.io Portfolio
-            </a>
+            <div className="flex gap-4 justify-center">
+              <a 
+                href="https://distania.carrd.co" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-all duration-300 font-semibold"
+              >
+                <ExternalLink className="h-4 w-4" />
+                Visit My Website
+              </a>
+              <a 
+                href="https://zenomaru.itch.io" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-secondary text-secondary-foreground rounded-lg hover:bg-secondary/80 transition-all duration-300 font-semibold"
+              >
+                <ExternalLink className="h-4 w-4" />
+                Itch.io Portfolio
+              </a>
+            </div>
           </div>
         </div>
       </div>

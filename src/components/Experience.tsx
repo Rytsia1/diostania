@@ -1,37 +1,18 @@
 import { Timeline } from "@/components/ui/timeline";
 import { Briefcase, Users } from "lucide-react";
-import { motion } from "framer-motion";
 
 const Experience = () => {
   const data = [
     {
       title: "2023",
       content: (
-        <motion.div 
-          className="py-4"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.8 }}
-          transition={{ duration: 0.6, ease: "easeOut" }}
-        >
+        <div className="py-4">
           <div className="flex items-center gap-4">
-            <motion.div 
-              className="h-px flex-1 bg-gradient-to-r from-transparent via-primary to-transparent opacity-50"
-              initial={{ scaleX: 0 }}
-              whileInView={{ scaleX: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
-            />
+            <div className="h-px flex-1 bg-gradient-to-r from-transparent via-primary to-transparent opacity-50" />
             <h2 className="text-3xl md:text-4xl font-bold text-primary">2023</h2>
-            <motion.div 
-              className="h-px flex-1 bg-gradient-to-r from-primary via-transparent to-transparent opacity-50"
-              initial={{ scaleX: 0 }}
-              whileInView={{ scaleX: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
-            />
+            <div className="h-px flex-1 bg-gradient-to-r from-primary via-transparent to-transparent opacity-50" />
           </div>
-        </motion.div>
+        </div>
       ),
     },
     {
@@ -73,31 +54,13 @@ const Experience = () => {
     {
       title: "2024",
       content: (
-        <motion.div 
-          className="py-4"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.8 }}
-          transition={{ duration: 0.6, ease: "easeOut" }}
-        >
+        <div className="py-4">
           <div className="flex items-center gap-4">
-            <motion.div 
-              className="h-px flex-1 bg-gradient-to-r from-transparent via-primary to-transparent opacity-50"
-              initial={{ scaleX: 0 }}
-              whileInView={{ scaleX: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
-            />
+            <div className="h-px flex-1 bg-gradient-to-r from-transparent via-primary to-transparent opacity-50" />
             <h2 className="text-3xl md:text-4xl font-bold text-primary">2024</h2>
-            <motion.div 
-              className="h-px flex-1 bg-gradient-to-r from-primary via-transparent to-transparent opacity-50"
-              initial={{ scaleX: 0 }}
-              whileInView={{ scaleX: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
-            />
+            <div className="h-px flex-1 bg-gradient-to-r from-primary via-transparent to-transparent opacity-50" />
           </div>
-        </motion.div>
+        </div>
       ),
     },
     {
