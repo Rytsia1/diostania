@@ -107,7 +107,14 @@ const Projects = () => {
                   }`}
                   style={{ transitionDelay: `${index * 100}ms` }}
                 >
-                  <Card className="overflow-hidden bg-card border-border hover:border-primary transition-all duration-300 h-full group hover:shadow-xl hover:shadow-primary/20 cursor-pointer">
+                  {project.link ? (
+                    <a 
+                      href={project.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block h-full"
+                    >
+                      <Card className="overflow-hidden bg-card border-border hover:border-primary transition-all duration-300 h-full group hover:shadow-xl hover:shadow-primary/20 cursor-pointer">
                     {/* Project Image */}
                     <div className="relative h-64 overflow-hidden">
                       <img 
@@ -170,27 +177,86 @@ const Projects = () => {
                         ))}
                       </div>
                       
-                      {/* Action Buttons */}
-                      <div className="flex gap-3">
-                        {project.link ? (
-                          <a 
-                            href={project.link}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="flex items-center gap-2 text-sm text-primary hover:text-primary/80 transition-colors font-semibold"
-                          >
-                            <ExternalLink className="h-4 w-4" />
-                            View Project
-                          </a>
-                        ) : (
-                          <span className="flex items-center gap-2 text-sm text-muted-foreground font-semibold">
-                            <ExternalLink className="h-4 w-4" />
-                            Coming Soon
-                          </span>
-                        )}
+                      {/* Click Indicator */}
+                      <div className="flex items-center gap-2 text-sm text-primary font-semibold">
+                        <ExternalLink className="h-4 w-4" />
+                        <span>Click to view project</span>
                       </div>
                     </div>
                   </Card>
+                    </a>
+                  ) : (
+                    <Card className="overflow-hidden bg-card border-border transition-all duration-300 h-full group">
+                    {/* Project Image */}
+                    <div className="relative h-64 overflow-hidden">
+                      <img 
+                        src={project.image} 
+                        alt={project.title}
+                        className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-card via-transparent to-transparent opacity-60" />
+                      
+                      {/* Status Badge */}
+                      <div className="absolute top-4 right-4">
+                        <Badge 
+                          className={`${
+                            project.status === 'ongoing' 
+                              ? 'bg-primary text-primary-foreground' 
+                              : 'bg-secondary text-secondary-foreground'
+                          }`}
+                        >
+                          {project.status === 'ongoing' ? '🔧 Ongoing' : '✓ Completed'}
+                        </Badge>
+                      </div>
+
+                      {/* Category Badge */}
+                      <div className="absolute top-4 left-4">
+                        <Badge variant="outline" className="bg-background/80 backdrop-blur-sm">
+                          {project.category}
+                        </Badge>
+                      </div>
+                    </div>
+                    
+                    {/* Project Content */}
+                    <div className="p-6">
+                      <h3 className="text-2xl font-bold mb-2 group-hover:text-primary transition-colors">
+                        {project.title}
+                      </h3>
+                      
+                      {project.achievements && (
+                        <div className="flex items-center gap-2 mb-3">
+                          <Trophy className="h-4 w-4 text-primary" />
+                          <span className="text-sm text-primary font-semibold">
+                            {project.achievements}
+                          </span>
+                        </div>
+                      )}
+                      
+                      <p className="text-muted-foreground mb-4 line-clamp-3">
+                        {project.description}
+                      </p>
+                      
+                      {/* Tech Stack */}
+                      <div className="flex flex-wrap gap-2 mb-4">
+                        {project.techStack.map((tech, i) => (
+                          <Badge 
+                            key={i} 
+                            variant="secondary"
+                            className="text-xs"
+                          >
+                            {tech}
+                          </Badge>
+                        ))}
+                      </div>
+                      
+                      {/* Coming Soon Indicator */}
+                      <div className="flex items-center gap-2 text-sm text-muted-foreground font-semibold">
+                        <ExternalLink className="h-4 w-4" />
+                        <span>Coming Soon</span>
+                      </div>
+                    </div>
+                  </Card>
+                  )}
                 </div>
               );
             })}
