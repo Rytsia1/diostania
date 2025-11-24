@@ -114,7 +114,7 @@ const Projects = () => {
                       rel="noopener noreferrer"
                       className="block h-full"
                     >
-                      <Card className="overflow-hidden bg-card border-border hover:border-primary transition-all duration-300 h-full group hover:shadow-xl hover:shadow-primary/20 cursor-pointer">
+                      <Card className="overflow-hidden bg-card border-border hover:border-primary transition-all duration-300 h-full group hover:shadow-xl hover:shadow-primary/20 cursor-pointer hover:-translate-y-2">
                     {/* Project Image */}
                     <div className="relative h-64 overflow-hidden">
                       <img 
@@ -186,7 +186,7 @@ const Projects = () => {
                   </Card>
                     </a>
                   ) : (
-                    <Card className="overflow-hidden bg-card border-border transition-all duration-300 h-full group">
+                    <Card className="overflow-hidden bg-card border-border transition-all duration-300 h-full group hover:-translate-y-1 hover:shadow-lg">
                     {/* Project Image */}
                     <div className="relative h-64 overflow-hidden">
                       <img 
