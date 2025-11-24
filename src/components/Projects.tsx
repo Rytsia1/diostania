@@ -192,26 +192,15 @@ const Projects = () => {
             <p className="text-muted-foreground mb-4">
               Want to see more of my work?
             </p>
-            <div className="flex gap-4 justify-center">
-              <a 
-                href="https://distania.carrd.co" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-all duration-300 font-semibold"
-              >
-                <ExternalLink className="h-4 w-4" />
-                Visit My Website
-              </a>
-              <a 
-                href="https://zenomaru.itch.io" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-6 py-3 bg-secondary text-secondary-foreground rounded-lg hover:bg-secondary/80 transition-all duration-300 font-semibold"
-              >
-                <ExternalLink className="h-4 w-4" />
-                Itch.io Portfolio
-              </a>
-            </div>
+            <a 
+              href="https://zenomaru.itch.io" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-all duration-300 font-semibold"
+            >
+              <ExternalLink className="h-4 w-4" />
+              Itch.io Portfolio
+            </a>
           </div>
         </div>
       </div>
