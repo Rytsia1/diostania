@@ -1,6 +1,5 @@
 import Hero from "@/components/Hero";
-import Experience from "@/components/Experience";
-import Education from "@/components/Education";
+import Journey from "@/components/Journey";
 import Skills from "@/components/Skills";
 import Projects from "@/components/Projects";
 import Achievements from "@/components/Achievements";
@@ -10,8 +9,7 @@ const Index = () => {
   return (
     <div className="min-h-screen">
       <Hero />
-      <Experience />
-      <Education />
+      <Journey />
       <Skills />
       <Projects />
       <Achievements />
