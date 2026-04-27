@@ -57,7 +57,7 @@ const Hero = () => {
               size="lg" 
               variant="outline"
               className="border-primary text-primary hover:bg-primary hover:text-primary-foreground"
-              onClick={() => document.getElementById('experience')?.scrollIntoView({ behavior: 'smooth' })}
+              onClick={() => document.getElementById('journey')?.scrollIntoView({ behavior: 'smooth' })}
             >
               <FileText className="mr-2 h-5 w-5" />
               View Experience
