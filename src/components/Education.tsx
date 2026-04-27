@@ -98,6 +98,36 @@ const Education = () => {
       ),
     },
     {
+      title: "2026",
+      content: (
+        <div>
+          <div className="flex items-center gap-3 mb-4">
+            <div className="w-12 h-12 rounded-full bg-gradient-primary flex items-center justify-center">
+              <GraduationCap className="h-6 w-6 text-primary-foreground" />
+            </div>
+            <div>
+              <h3 className="text-xl font-bold text-foreground">Student Exchange Program</h3>
+              <p className="text-primary font-semibold">Software Engineering — Spring Semester</p>
+            </div>
+          </div>
+          <p className="text-muted-foreground text-sm md:text-base mb-4">
+            Currently attending Shandong University of Science and Technology as an exchange student for the spring semester, expanding international experience and deepening expertise in Software Engineering.
+          </p>
+          <Card className="p-4 bg-card/50 border-border">
+            <p className="text-sm text-muted-foreground">
+              <span className="text-primary font-semibold">Institution:</span> Shandong University of Science and Technology
+            </p>
+            <p className="text-sm text-muted-foreground mt-2">
+              <span className="text-primary font-semibold">Major:</span> Software Engineering
+            </p>
+            <p className="text-sm text-muted-foreground mt-2">
+              <span className="text-primary font-semibold">Location:</span> Shandong, China
+            </p>
+          </Card>
+        </div>
+      ),
+    },
+    {
       title: "2027",
       content: (
         <div>
